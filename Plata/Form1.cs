@@ -14,9 +14,9 @@ namespace Plata
     {
         public Form1()
         {
+            //this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
             
         }
-       
     }
 }
