@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plata.Model;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,6 +10,10 @@ namespace Plata.Repository
 {
     class DataContext : DbContext
     {
-       // public DbSet<Firma> firmi { get; set; }
+       public DataContext() : base("name=Model11")
+        {
+
+        }
+       public virtual DbSet<Firma> firmi { get; set; }
     }
 }

@@ -27,3 +27,4 @@ C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plat
 C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.csproj.CopyComplete
 C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.exe
 C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.pdb
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.FirmaAdded.resources
