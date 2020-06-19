@@ -12,3 +12,18 @@ C:\Users\Andrej\source\repos\Plata\Plata\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Andrej\source\repos\Plata\Plata\bin\Debug\EntityFramework.xml
 C:\Users\Andrej\source\repos\Plata\Plata\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Andrej\source\repos\Plata\Plata\obj\Debug\Plata.csproj.CopyComplete
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\bin\Debug\Plata.exe.config
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\bin\Debug\Plata.exe
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\bin\Debug\Plata.pdb
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\bin\Debug\EntityFramework.dll
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\bin\Debug\EntityFramework.xml
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.csprojAssemblyReference.cache
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Form1.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Properties.Resources.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.csproj.GenerateResource.cache
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.csproj.CopyComplete
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.exe
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.pdb
