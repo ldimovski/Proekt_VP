@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,8 +50,7 @@ namespace Plata.Model
         public bool minTrud { get; set; }
         public bool odBruto { get; set; }
         public bool zastita { get; set; }
-
-        
-
+        List<Vraboten> vraboteni { get; set; }
+       
     }
 }

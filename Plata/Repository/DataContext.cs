@@ -15,5 +15,6 @@ namespace Plata.Repository
 
         }
        public virtual DbSet<Firma> firmi { get; set; }
+       public virtual DbSet<Vraboten> vraboteni { get; set; }
     }
 }

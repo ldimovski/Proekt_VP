@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\FirmaController.cs" />
+    <Compile Include="Controller\PlataController.cs" />
+    <Compile Include="Controller\VrabotenController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,9 +71,43 @@
     <Compile Include="Migrations\202006191039438_Firma Added.designer.cs">
       <DependentUpon>202006191039438_Firma Added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006191724366_Added Vraboten Class.cs" />
+    <Compile Include="Migrations\202006191724366_Added Vraboten Class.designer.cs">
+      <DependentUpon>202006191724366_Added Vraboten Class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006191731086_Added List to Firma.cs" />
+    <Compile Include="Migrations\202006191731086_Added List to Firma.designer.cs">
+      <DependentUpon>202006191731086_Added List to Firma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006191740166_Added OneToManyRelation.cs" />
+    <Compile Include="Migrations\202006191740166_Added OneToManyRelation.designer.cs">
+      <DependentUpon>202006191740166_Added OneToManyRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006191758179_FixForVraboteniInFirma.cs" />
+    <Compile Include="Migrations\202006191758179_FixForVraboteniInFirma.designer.cs">
+      <DependentUpon>202006191758179_FixForVraboteniInFirma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006191804083_NewMig.cs" />
+    <Compile Include="Migrations\202006191804083_NewMig.designer.cs">
+      <DependentUpon>202006191804083_NewMig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006192000011_TestMig.cs" />
+    <Compile Include="Migrations\202006192000011_TestMig.designer.cs">
+      <DependentUpon>202006192000011_TestMig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006192000402_TestMig2.cs" />
+    <Compile Include="Migrations\202006192000402_TestMig2.designer.cs">
+      <DependentUpon>202006192000402_TestMig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006192101264_TestMig3.cs" />
+    <Compile Include="Migrations\202006192101264_TestMig3.designer.cs">
+      <DependentUpon>202006192101264_TestMig3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Model\Firma.cs" />
+    <Compile Include="Model\Plata.cs" />
+    <Compile Include="Model\Vraboten.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\DataContext.cs" />
@@ -80,6 +116,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006191039438_Firma Added.resx">
       <DependentUpon>202006191039438_Firma Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006191724366_Added Vraboten Class.resx">
+      <DependentUpon>202006191724366_Added Vraboten Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006191731086_Added List to Firma.resx">
+      <DependentUpon>202006191731086_Added List to Firma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006191740166_Added OneToManyRelation.resx">
+      <DependentUpon>202006191740166_Added OneToManyRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006191758179_FixForVraboteniInFirma.resx">
+      <DependentUpon>202006191758179_FixForVraboteniInFirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006191804083_NewMig.resx">
+      <DependentUpon>202006191804083_NewMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006192000011_TestMig.resx">
+      <DependentUpon>202006192000011_TestMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006192000402_TestMig2.resx">
+      <DependentUpon>202006192000402_TestMig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006192101264_TestMig3.resx">
+      <DependentUpon>202006192101264_TestMig3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
