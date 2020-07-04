@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -66,7 +67,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtOpstina = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMesto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -149,6 +149,7 @@
             this.btnOdberi4 = new System.Windows.Forms.Button();
             this.cmbFirmi3 = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbOpstinaFirma = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -174,6 +175,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cmbOpstinaFirma);
             this.tabPage1.Controls.Add(this.txtId);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.panel3);
@@ -203,7 +205,6 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.txtTelefon);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.txtOpstina);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.txtMesto);
             this.tabPage1.Controls.Add(this.label4);
@@ -562,15 +563,6 @@
             this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 23;
             this.label6.Text = "Телефон";
-            // 
-            // txtOpstina
-            // 
-            this.txtOpstina.Location = new System.Drawing.Point(43, 300);
-            this.txtOpstina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtOpstina.Name = "txtOpstina";
-            this.txtOpstina.Size = new System.Drawing.Size(177, 22);
-            this.txtOpstina.TabIndex = 7;
-            this.txtOpstina.Validating += new System.ComponentModel.CancelEventHandler(this.CheckNumber);
             // 
             // label3
             // 
@@ -1566,12 +1558,109 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // cmbOpstinaFirma
+            // 
+            this.cmbOpstinaFirma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOpstinaFirma.FormattingEnabled = true;
+            this.cmbOpstinaFirma.Items.AddRange(new object[] {
+            "Арачиново 101",
+            "Берово 102",
+            "Битола 103",
+            "Богданци\t104",
+            "Боговиње\t105",
+            "Босилово\t106",
+            "Брвеница\t107",
+            "Валандово 108",
+            "Василево\t109",
+            "Вевчани 110",
+            "Велес 111",
+            "Виница 112",
+            "Вранештица 113",
+            "Врапчиште 114",
+            "Гевгелија 115",
+            "Гостивар 116",
+            "Градско 117",
+            "Дебар 118",
+            "Дебарца 119",
+            "Делчево 120",
+            "Демир Капија 121",
+            "Демир Хисар 122",
+            "Дојран 123",
+            "Долнени 124",
+            "Другово 125",
+            "Желино 126",
+            "Зајас 127",
+            "Залениково 128",
+            "Зрновци 129",
+            "Илинден 130",
+            "Јегуновце\t131",
+            "Кавадарци 132",
+            "Карбинци\t133",
+            "Кичево 134",
+            "Конче 135",
+            "Кочани 136",
+            "Кратово 137",
+            "Крива Паланка 138",
+            "Кривогаштани 139",
+            "Крушево 140",
+            "Куманово\t141",
+            "Липково 142",
+            "Лозово 143",
+            "Маврово и Ростуше 144",
+            "Македонски Брод 145",
+            "Македонска Каменица 146",
+            "Могила 147",
+            "Неготино 148",
+            "Новаци 149",
+            "Ново Село 150",
+            "Осломеј 151",
+            "Охрид 152",
+            "Петровец\t153",
+            "Пехчево 154",
+            "Пласница\t155",
+            "Прилеп 156",
+            "Пробиштип 157",
+            "Радовиш 158",
+            "Ранковце 159",
+            "Ресен 160",
+            "Росоман 161",
+            "Старо Нагоричане 162",
+            "Свети Николе 163",
+            "Сопиште 164",
+            "Струга 165",
+            "Струмица 166",
+            "Студеничани 167",
+            "Теарце 168",
+            "Тетово 169",
+            "Центар Жупа 170",
+            "Чашка 171",
+            "Чешино и Облешево 172",
+            "Чучер Сандево 173",
+            "Штип 174",
+            "Аеродром 175",
+            "Бутел 176",
+            "Гази Баба 177",
+            "Ѓорче Петров 178",
+            "Карпош 179",
+            "Кисела Вода 180",
+            "Сарај 181",
+            "Центар 182",
+            "Чаир 183",
+            "Шуто Оризари 184",
+            "Град Скопје 185"});
+            this.cmbOpstinaFirma.Location = new System.Drawing.Point(43, 302);
+            this.cmbOpstinaFirma.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbOpstinaFirma.Name = "cmbOpstinaFirma";
+            this.cmbOpstinaFirma.Size = new System.Drawing.Size(177, 24);
+            this.cmbOpstinaFirma.TabIndex = 37;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1139, 577);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Plata";
@@ -1626,7 +1715,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtOpstina;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMesto;
         private System.Windows.Forms.Label label4;
@@ -1715,6 +1803,7 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox txtVkupno;
         private System.Windows.Forms.Button btnGeneriraj;
+        private System.Windows.Forms.ComboBox cmbOpstinaFirma;
     }
 }
 

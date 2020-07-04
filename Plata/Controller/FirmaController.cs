@@ -14,7 +14,7 @@ namespace Plata.Controller
 
         static DataContext db = new DataContext();
 
-        public static void Update(TextBox txtId ,TextBox txtIme, TextBox txtAdresa, TextBox txtMesto, TextBox txtOpstina, TextBox txtTelefon,
+        public static void Update(TextBox txtId ,TextBox txtIme, TextBox txtAdresa, TextBox txtMesto, ComboBox cmbOpstina, TextBox txtTelefon,
                TextBox txtEmail, TextBox txtDejnost, TextBox txtZiroSmetka, TextBox txtEdb, TextBox txtPosta, TextBox txtBroj, TextBox txtGrad,
               TextBox txtPovBroj, TextBox txtFaks, RadioButton rbMinatTrudDa, RadioButton rbOdBrutoDa,
                RadioButton rbZastitaDa)
@@ -24,7 +24,7 @@ namespace Plata.Controller
             firma.ime = txtIme.Text;
             firma.adresa = txtAdresa.Text;
             firma.naselenoMesto = txtMesto.Text;
-            firma.opstina = txtOpstina.Text;
+            firma.opstina = cmbOpstina.SelectedItem.ToString();
             firma.telefon = txtTelefon.Text;
             firma.email = txtEmail.Text;
             firma.dejnost = txtDejnost.Text;
@@ -63,7 +63,7 @@ namespace Plata.Controller
 
             db.SaveChanges();
         }
-        public static void Save(TextBox txtIme, TextBox txtAdresa, TextBox txtMesto, TextBox txtOpstina, TextBox txtTelefon,
+        public static void Save(TextBox txtIme, TextBox txtAdresa, TextBox txtMesto, ComboBox cmbOpstina, TextBox txtTelefon,
                TextBox txtEmail, TextBox txtDejnost, TextBox txtZiroSmetka, TextBox txtEdb, TextBox txtPosta, TextBox txtBroj, TextBox txtGrad,
               TextBox txtPovBroj, TextBox txtFaks, RadioButton rbMinatTrudDa, RadioButton rbOdBrutoDa,
                RadioButton rbZastitaDa)
@@ -83,7 +83,7 @@ namespace Plata.Controller
             {
                 odBruto = true;
             }
-                Firma firma = new Firma(txtIme.Text, txtAdresa.Text, txtMesto.Text, txtOpstina.Text, txtTelefon.Text,
+                Firma firma = new Firma(txtIme.Text, txtAdresa.Text, txtMesto.Text, cmbOpstina.SelectedItem.ToString(), txtTelefon.Text,
                 txtEmail.Text, txtDejnost.Text, txtZiroSmetka.Text, txtEdb.Text, txtPosta.Text, txtBroj.Text, txtGrad.Text,
                 txtPovBroj.Text, txtFaks.Text, minTrud, odBruto, zastita);
 

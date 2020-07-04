@@ -49,7 +49,7 @@ namespace Plata
         {
             if (cmbFirmi.SelectedIndex == -1)
             {
-                if (txtIme.Text != "" && txtAdresa.Text != "" && txtMesto.Text != "" && txtOpstina.Text != "" && txtTelefon.Text != ""
+                if (txtIme.Text != "" && txtAdresa.Text != "" && txtMesto.Text != "" && cmbOpstinaFirma.SelectedIndex != -1 && txtTelefon.Text != ""
                 && txtEmail.Text != "" && txtTelefon.Text != "" && txtDejnost.Text != "" && txtZiroSmetka.Text != "" &&
                 txtEdb.Text != "" && txtPosta.Text != "" && txtBroj.Text != "" && txtGrad.Text != "" && txtPovBroj.Text != "" &&
                 txtFaks.Text != "")
@@ -57,7 +57,7 @@ namespace Plata
                     if ((rbMinatTrudDa.Checked || rbMinatTrudNe.Checked) && (rbZastitaDa.Checked || rbZastitaNe.Checked) &&
                         (rbOdBrutoDa.Checked || rbOdBrutoNe.Checked))
                     {
-                        FirmaController.Save(txtIme, txtAdresa, txtMesto, txtOpstina, txtTelefon,
+                        FirmaController.Save(txtIme, txtAdresa, txtMesto, cmbOpstinaFirma, txtTelefon,
                         txtEmail, txtDejnost, txtZiroSmetka, txtEdb, txtPosta, txtBroj, txtGrad,
                         txtPovBroj, txtFaks, rbMinatTrudDa, rbOdBrutoDa, rbZastitaDa);
                         errorProvider1.SetError(button3, "");
@@ -79,7 +79,7 @@ namespace Plata
             }
             else
             {
-                if (txtIme.Text != "" && txtAdresa.Text != "" && txtMesto.Text != "" && txtOpstina.Text != "" && txtTelefon.Text != ""
+                if (txtIme.Text != "" && txtAdresa.Text != "" && txtMesto.Text != "" && cmbOpstinaFirma.SelectedIndex != -1 && txtTelefon.Text != ""
                 && txtEmail.Text != "" && txtTelefon.Text != "" && txtDejnost.Text != "" && txtZiroSmetka.Text != "" &&
                 txtEdb.Text != "" && txtPosta.Text != "" && txtBroj.Text != "" && txtGrad.Text != "" && txtPovBroj.Text != "" &&
                 txtFaks.Text != "")
@@ -87,7 +87,7 @@ namespace Plata
                     if ((rbMinatTrudDa.Checked || rbMinatTrudNe.Checked) && (rbZastitaDa.Checked || rbZastitaNe.Checked) &&
                         (rbOdBrutoDa.Checked || rbOdBrutoNe.Checked))
                     {
-                        FirmaController.Update(txtId, txtIme, txtAdresa, txtMesto, txtOpstina, txtTelefon,
+                        FirmaController.Update(txtId, txtIme, txtAdresa, txtMesto, cmbOpstinaFirma, txtTelefon,
                         txtEmail, txtDejnost, txtZiroSmetka, txtEdb, txtPosta, txtBroj, txtGrad,
                         txtPovBroj, txtFaks, rbMinatTrudDa, rbOdBrutoDa, rbZastitaDa);
                         Clear();
@@ -106,7 +106,7 @@ namespace Plata
             txtIme.Clear();
             txtAdresa.Clear();
             txtMesto.Clear();
-            txtOpstina.Clear();
+            cmbOpstinaFirma.SelectedIndex = -1;
             txtTelefon.Clear();
             txtEmail.Clear();
             txtDejnost.Clear();
@@ -147,7 +147,8 @@ namespace Plata
                 txtIme.Text = firma.ime;
                 txtAdresa.Text = firma.adresa;
                 txtMesto.Text = firma.naselenoMesto;
-                txtOpstina.Text = firma.opstina;
+                //txtOpstina.Text = firma.opstina;
+                cmbOpstinaFirma.SelectedItem = firma.opstina;
                 txtTelefon.Text = firma.telefon;
                 txtEmail.Text = firma.email;
                 txtDejnost.Text = firma.dejnost;
