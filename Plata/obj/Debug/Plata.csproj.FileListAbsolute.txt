@@ -37,3 +37,12 @@ C:\Users\Andrej\source\repos\Plata\Plata\obj\Debug\Plata.Migrations.NewMig.resou
 C:\Users\Andrej\source\repos\Plata\Plata\obj\Debug\Plata.Migrations.TestMig.resources
 C:\Users\Andrej\source\repos\Plata\Plata\obj\Debug\Plata.Migrations.TestMig2.resources
 C:\Users\Andrej\source\repos\Plata\Plata\obj\Debug\Plata.Migrations.TestMig3.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.AddedVrabotenClass.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.AddedListtoFirma.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.AddedOneToManyRelation.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.FixForVraboteniInFirma.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.NewMig.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.TestMig.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.TestMig2.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.TestMig3.resources
+C:\Users\Korisnik\Desktop\Programirane Probi i Vezbi\Proekt\Plata\obj\Debug\Plata.Migrations.test.resources

@@ -16,5 +16,15 @@ namespace Plata.Repository
         }
        public virtual DbSet<Firma> firmi { get; set; }
        public virtual DbSet<Vraboten> vraboteni { get; set; }
+
+
+        // dodadeno 
+       /* protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<DataContext>(null);
+            base.OnModelCreating(modelBuilder);
+        }*/
     }
+
+
 }

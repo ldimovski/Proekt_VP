@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -55,12 +56,23 @@ namespace Plata
                 {
                     if ((rbMinatTrudDa.Checked || rbMinatTrudNe.Checked) && (rbZastitaDa.Checked || rbZastitaNe.Checked) &&
                         (rbOdBrutoDa.Checked || rbOdBrutoNe.Checked))
-
-
+                    {
                         FirmaController.Save(txtIme, txtAdresa, txtMesto, txtOpstina, txtTelefon,
                         txtEmail, txtDejnost, txtZiroSmetka, txtEdb, txtPosta, txtBroj, txtGrad,
                         txtPovBroj, txtFaks, rbMinatTrudDa, rbOdBrutoDa, rbZastitaDa);
+                        errorProvider1.SetError(button3, "");
+                        Clear();
+                        LoadComboBox();
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(button3, "Сите полиња се задолжителни");
+                    }
 
+                }
+                else
+                {
+                    errorProvider1.SetError(button3, "Сите полиња се задолжителни!");
                 }
 
 
@@ -74,16 +86,17 @@ namespace Plata
                 {
                     if ((rbMinatTrudDa.Checked || rbMinatTrudNe.Checked) && (rbZastitaDa.Checked || rbZastitaNe.Checked) &&
                         (rbOdBrutoDa.Checked || rbOdBrutoNe.Checked))
-
-
+                    {
                         FirmaController.Update(txtId, txtIme, txtAdresa, txtMesto, txtOpstina, txtTelefon,
                         txtEmail, txtDejnost, txtZiroSmetka, txtEdb, txtPosta, txtBroj, txtGrad,
                         txtPovBroj, txtFaks, rbMinatTrudDa, rbOdBrutoDa, rbZastitaDa);
+                        Clear();
+                        LoadComboBox();
+                    }
 
                 }
             }
-            Clear();
-            LoadComboBox();
+            
 
 
         }
@@ -217,6 +230,15 @@ namespace Plata
                 {
                     VrabotenController.Save(txtFirmaId, txtImePrezime, cmbPol, txtEmbg, txtAdresa2, cmbOpstina, txtTransak, cmbPodracna, txtEmail2, txtBruto,
                         txtNeto, cmbSifra, txtSkrateno, dateTimePicker1, chbOtkaz, dateTimePicker2);
+
+                    errorProvider1.SetError(button7, "");
+                    Clear2();
+                    long temp = (long)cmbFirmi2.SelectedValue;
+                    loadListBox(temp);
+                }
+                else
+                {
+                    errorProvider1.SetError(button7, "Сите полиња се задолжителни!");
                 }
             }
             else
@@ -226,14 +248,21 @@ namespace Plata
                 {
                     VrabotenController.Update(txtFirmaId, txtImePrezime, cmbPol, txtEmbg, txtAdresa2, cmbOpstina, txtTransak, cmbPodracna, txtEmail2, txtBruto,
                         txtNeto, cmbSifra, txtSkrateno, dateTimePicker1, chbOtkaz, dateTimePicker2, txtVrabotenId);
+
+                    errorProvider1.SetError(button7, "");
+                    Clear2();
+                    long temp = (long)cmbFirmi2.SelectedValue;
+                    loadListBox(temp);
+                }
+                else
+                {
+                    errorProvider1.SetError(button7, "Сите полиња се задолжителни!");
                 }
             }
 
             
 
-            Clear2();
-            long temp = (long)cmbFirmi2.SelectedValue;
-            loadListBox(temp);
+            
         }
 
         private void chbOtkaz_CheckedChanged(object sender, EventArgs e)
@@ -382,9 +411,124 @@ namespace Plata
             Firma firma = FirmaController.GetFirmaById(temp);
             String str = PlataController.generate(temp);
             DateTime date = dateTimePicker3.Value;
-            StreamWriter file = new StreamWriter(firma.ime+"-"+date.ToString("MMMM")+"-"+date.ToString("yyyy")+".csv");
+            StreamWriter file = new StreamWriter(@"..\..\Izvestai\" + firma.ime+"-"+date.ToString("MMMM")+"-"+date.ToString("yyyy")+".csv");
             file.Write(str);
             file.Close();
+            MessageBox.Show("Успешно генериран извештај за фирмата!");
+        }
+
+
+        public bool checkNumberExists(String text)
+        {
+            foreach (char c in text)
+            {
+                if (Char.IsDigit(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool checkAlphabetExist(String text)
+        {
+            foreach (char c in text)
+            {
+                if (Char.IsLetter(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        private void CheckNumber(object sender, CancelEventArgs e)
+        {
+            TextBox proba = sender as TextBox;
+            String text = proba.Text;
+            text = Regex.Replace(text, @"\s+", "");
+
+            if (checkNumberExists(text) || text.Equals(""))
+            {
+                errorProvider1.SetError(proba, "Не смее тоа поле да содржи број или да биде празно!");
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(proba, "");
+            }
+        }
+
+
+        private void CheckAlphabet(object sender, CancelEventArgs e)
+        {
+            TextBox proba = sender as TextBox;
+            String text = proba.Text;
+            text = Regex.Replace(text, @"\s+", "");
+
+            if (checkAlphabetExist(text) || text.Equals(""))
+            {
+                errorProvider1.SetError(proba, "Не смее тоа поле да содржи буква или да биде празно!");
+                e.Cancel = true;
+            }
+            else
+            {
+                long broj = long.Parse(text);
+                if(broj < 0)
+                {
+                    errorProvider1.SetError(proba, "Не смее тоа поле да содржи негативен број!");
+                    e.Cancel = true;
+                }
+
+                else
+                {
+                    e.Cancel = false;
+                    errorProvider1.SetError(proba, "");
+                }
+            }
+        }
+
+        private void checkEmail(object sender, CancelEventArgs e)
+        {
+            TextBox text = sender as TextBox;
+            String email;
+            if (text != null)
+            {
+                email = text.Text;
+
+                try
+                {
+                    var addr = new System.Net.Mail.MailAddress(email);
+                    e.Cancel = false;
+                    errorProvider1.SetError(text, "");
+                }
+                catch
+                {
+                    errorProvider1.SetError(text, "Мора да биде валиден емаил формат!");
+                    e.Cancel = true; ;
+                }
+            }
+        }
+
+        private void AdresaValidating(object sender, CancelEventArgs e)
+        {
+            TextBox proba = sender as TextBox;
+            String text = proba.Text;
+            text = Regex.Replace(text, @"\s+", "");
+
+            if (text.Equals(""))
+            {
+                errorProvider1.SetError(proba, "Не смее оа поле да биде празно");
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(proba, "");
+            }
         }
     }
 }
+

@@ -103,6 +103,10 @@
     <Compile Include="Migrations\202006192101264_TestMig3.designer.cs">
       <DependentUpon>202006192101264_TestMig3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006201659520_test..cs" />
+    <Compile Include="Migrations\202006201659520_test..designer.cs">
+      <DependentUpon>202006201659520_test..cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Model\Firma.cs" />
@@ -140,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006192101264_TestMig3.resx">
       <DependentUpon>202006192101264_TestMig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006201659520_test..resx">
+      <DependentUpon>202006201659520_test..cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
