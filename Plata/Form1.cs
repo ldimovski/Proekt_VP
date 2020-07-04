@@ -204,6 +204,8 @@ namespace Plata
             FirmaController.DeleteById(temp);
             cmbFirmi.SelectedIndex = -1;
             Clear();
+            Clear2();
+            Clear3();
         }
 
         private void btnOdberi2_Click(object sender, EventArgs e)
@@ -343,6 +345,7 @@ namespace Plata
             long temp = (long)lstBox.SelectedValue;
             VrabotenController.deleteVrabotenById(temp);
             Clear2();
+            Clear3();
         }
         public void loadCmbVraboteni(long temp)
         {
@@ -372,6 +375,7 @@ namespace Plata
             txtPridonesiVrabotuvanje.Clear();
             txtPridonesiZdravstvo.Clear();
             txtProfZaboluvanje.Clear();
+            rtbPreview.Clear();
         }
 
         private void btnClear4_Click(object sender, EventArgs e)
@@ -416,6 +420,7 @@ namespace Plata
             file.Write(str);
             file.Close();
             MessageBox.Show("Успешно генериран извештај за фирмата!");
+            btnPreview.PerformClick();
         }
 
 
@@ -529,6 +534,13 @@ namespace Plata
                 e.Cancel = false;
                 errorProvider1.SetError(proba, "");
             }
+        }
+
+        private void BtnPreview_Click(object sender, EventArgs e)
+        {
+            long temp = long.Parse(cmbFirmi3.SelectedValue.ToString());
+            String str = PlataController.generate(temp);
+            rtbPreview.Text = str;
         }
     }
 }

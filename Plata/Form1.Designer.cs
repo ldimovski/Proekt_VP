@@ -150,6 +150,9 @@
             this.cmbFirmi3 = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.cmbOpstinaFirma = new System.Windows.Forms.ComboBox();
+            this.rtbPreview = new System.Windows.Forms.RichTextBox();
+            this.btnPreview = new System.Windows.Forms.Button();
+            this.label44 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1212,6 +1215,9 @@
             // 
             // Плата
             // 
+            this.Плата.Controls.Add(this.label44);
+            this.Плата.Controls.Add(this.btnPreview);
+            this.Плата.Controls.Add(this.rtbPreview);
             this.Плата.Controls.Add(this.btnGeneriraj);
             this.Плата.Controls.Add(this.label41);
             this.Плата.Controls.Add(this.txtVkupno);
@@ -1266,21 +1272,21 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(673, 176);
+            this.label41.Location = new System.Drawing.Point(661, 176);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(179, 17);
-            this.label41.TabIndex = 24;
+            this.label41.TabIndex = 26;
             this.label41.Text = "Вкупно трошоци за плати";
             // 
             // txtVkupno
             // 
             this.txtVkupno.Enabled = false;
-            this.txtVkupno.Location = new System.Drawing.Point(677, 199);
+            this.txtVkupno.Location = new System.Drawing.Point(664, 199);
             this.txtVkupno.Margin = new System.Windows.Forms.Padding(4);
             this.txtVkupno.Name = "txtVkupno";
             this.txtVkupno.Size = new System.Drawing.Size(177, 22);
-            this.txtVkupno.TabIndex = 15;
+            this.txtVkupno.TabIndex = 16;
             // 
             // label37
             // 
@@ -1289,7 +1295,7 @@
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(186, 17);
-            this.label37.TabIndex = 23;
+            this.label37.TabIndex = 25;
             this.label37.Text = "Придонеси за личен доход";
             // 
             // txtDohod
@@ -1299,7 +1305,7 @@
             this.txtDohod.Margin = new System.Windows.Forms.Padding(4);
             this.txtDohod.Name = "txtDohod";
             this.txtDohod.Size = new System.Drawing.Size(177, 22);
-            this.txtDohod.TabIndex = 14;
+            this.txtDohod.TabIndex = 15;
             // 
             // label36
             // 
@@ -1308,7 +1314,7 @@
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(228, 17);
-            this.label36.TabIndex = 22;
+            this.label36.TabIndex = 24;
             this.label36.Text = "Придонеси за проф. заболување";
             // 
             // txtProfZaboluvanje
@@ -1318,7 +1324,7 @@
             this.txtProfZaboluvanje.Margin = new System.Windows.Forms.Padding(4);
             this.txtProfZaboluvanje.Name = "txtProfZaboluvanje";
             this.txtProfZaboluvanje.Size = new System.Drawing.Size(177, 22);
-            this.txtProfZaboluvanje.TabIndex = 13;
+            this.txtProfZaboluvanje.TabIndex = 14;
             // 
             // label27
             // 
@@ -1327,7 +1333,7 @@
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(192, 17);
-            this.label27.TabIndex = 21;
+            this.label27.TabIndex = 23;
             this.label27.Text = "Придонеси за вработување";
             // 
             // txtPridonesiVrabotuvanje
@@ -1337,7 +1343,7 @@
             this.txtPridonesiVrabotuvanje.Margin = new System.Windows.Forms.Padding(4);
             this.txtPridonesiVrabotuvanje.Name = "txtPridonesiVrabotuvanje";
             this.txtPridonesiVrabotuvanje.Size = new System.Drawing.Size(177, 22);
-            this.txtPridonesiVrabotuvanje.TabIndex = 12;
+            this.txtPridonesiVrabotuvanje.TabIndex = 13;
             // 
             // label26
             // 
@@ -1346,7 +1352,7 @@
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(375, 17);
-            this.label26.TabIndex = 20;
+            this.label26.TabIndex = 22;
             this.label26.Text = "Придонеси за задолжително здравствено осигурување";
             // 
             // txtPridonesiZdravstvo
@@ -1356,7 +1362,7 @@
             this.txtPridonesiZdravstvo.Margin = new System.Windows.Forms.Padding(4);
             this.txtPridonesiZdravstvo.Name = "txtPridonesiZdravstvo";
             this.txtPridonesiZdravstvo.Size = new System.Drawing.Size(177, 22);
-            this.txtPridonesiZdravstvo.TabIndex = 11;
+            this.txtPridonesiZdravstvo.TabIndex = 12;
             // 
             // label25
             // 
@@ -1365,17 +1371,17 @@
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(139, 17);
-            this.label25.TabIndex = 19;
+            this.label25.TabIndex = 21;
             this.label25.Text = "Придонеси за  ПИО";
             // 
             // txtPridonesiPio
             // 
             this.txtPridonesiPio.Enabled = false;
-            this.txtPridonesiPio.Location = new System.Drawing.Point(261, 199);
+            this.txtPridonesiPio.Location = new System.Drawing.Point(260, 199);
             this.txtPridonesiPio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPridonesiPio.Name = "txtPridonesiPio";
             this.txtPridonesiPio.Size = new System.Drawing.Size(177, 22);
-            this.txtPridonesiPio.TabIndex = 10;
+            this.txtPridonesiPio.TabIndex = 11;
             // 
             // label43
             // 
@@ -1384,7 +1390,7 @@
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(83, 17);
-            this.label43.TabIndex = 18;
+            this.label43.TabIndex = 20;
             this.label43.Text = "Нето износ";
             // 
             // txtNeto2
@@ -1394,7 +1400,7 @@
             this.txtNeto2.Margin = new System.Windows.Forms.Padding(4);
             this.txtNeto2.Name = "txtNeto2";
             this.txtNeto2.Size = new System.Drawing.Size(177, 22);
-            this.txtNeto2.TabIndex = 9;
+            this.txtNeto2.TabIndex = 10;
             // 
             // lblSaati
             // 
@@ -1403,7 +1409,7 @@
             this.lblSaati.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSaati.Name = "lblSaati";
             this.lblSaati.Size = new System.Drawing.Size(0, 17);
-            this.lblSaati.TabIndex = 30;
+            this.lblSaati.TabIndex = 33;
             // 
             // label42
             // 
@@ -1412,7 +1418,7 @@
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(106, 17);
-            this.label42.TabIndex = 27;
+            this.label42.TabIndex = 30;
             this.label42.Text = "Работни саати";
             // 
             // lblRabotni
@@ -1423,7 +1429,7 @@
             this.lblRabotni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRabotni.Name = "lblRabotni";
             this.lblRabotni.Size = new System.Drawing.Size(24, 17);
-            this.lblRabotni.TabIndex = 29;
+            this.lblRabotni.TabIndex = 32;
             this.lblRabotni.Text = "22";
             // 
             // label40
@@ -1433,7 +1439,7 @@
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(115, 17);
-            this.label40.TabIndex = 26;
+            this.label40.TabIndex = 29;
             this.label40.Text = "Работни денови";
             // 
             // lblDenovi
@@ -1443,7 +1449,7 @@
             this.lblDenovi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDenovi.Name = "lblDenovi";
             this.lblDenovi.Size = new System.Drawing.Size(0, 17);
-            this.lblDenovi.TabIndex = 28;
+            this.lblDenovi.TabIndex = 31;
             // 
             // label32
             // 
@@ -1452,7 +1458,7 @@
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(106, 17);
-            this.label32.TabIndex = 25;
+            this.label32.TabIndex = 28;
             this.label32.Text = "Вкупно денови";
             // 
             // label29
@@ -1462,7 +1468,7 @@
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(89, 17);
-            this.label29.TabIndex = 17;
+            this.label29.TabIndex = 19;
             this.label29.Text = "Бруто износ";
             // 
             // txtBruto2
@@ -1472,7 +1478,7 @@
             this.txtBruto2.Margin = new System.Windows.Forms.Padding(4);
             this.txtBruto2.Name = "txtBruto2";
             this.txtBruto2.Size = new System.Drawing.Size(177, 22);
-            this.txtBruto2.TabIndex = 8;
+            this.txtBruto2.TabIndex = 9;
             // 
             // label24
             // 
@@ -1481,7 +1487,7 @@
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(141, 17);
-            this.label24.TabIndex = 16;
+            this.label24.TabIndex = 18;
             this.label24.Text = "Одработени денови";
             // 
             // txtOdraboteni
@@ -1490,7 +1496,7 @@
             this.txtOdraboteni.Margin = new System.Windows.Forms.Padding(4);
             this.txtOdraboteni.Name = "txtOdraboteni";
             this.txtOdraboteni.Size = new System.Drawing.Size(177, 22);
-            this.txtOdraboteni.TabIndex = 7;
+            this.txtOdraboteni.TabIndex = 8;
             // 
             // btnOdberi5
             // 
@@ -1498,7 +1504,7 @@
             this.btnOdberi5.Margin = new System.Windows.Forms.Padding(4);
             this.btnOdberi5.Name = "btnOdberi5";
             this.btnOdberi5.Size = new System.Drawing.Size(131, 33);
-            this.btnOdberi5.TabIndex = 6;
+            this.btnOdberi5.TabIndex = 7;
             this.btnOdberi5.Text = "Одбери";
             this.btnOdberi5.UseVisualStyleBackColor = true;
             this.btnOdberi5.Click += new System.EventHandler(this.btnOdberi5_Click);
@@ -1511,7 +1517,7 @@
             this.cmbVraboteni.Margin = new System.Windows.Forms.Padding(4);
             this.cmbVraboteni.Name = "cmbVraboteni";
             this.cmbVraboteni.Size = new System.Drawing.Size(200, 24);
-            this.cmbVraboteni.TabIndex = 5;
+            this.cmbVraboteni.TabIndex = 6;
             // 
             // dateTimePicker3
             // 
@@ -1652,7 +1658,35 @@
             this.cmbOpstinaFirma.Margin = new System.Windows.Forms.Padding(4);
             this.cmbOpstinaFirma.Name = "cmbOpstinaFirma";
             this.cmbOpstinaFirma.Size = new System.Drawing.Size(177, 24);
-            this.cmbOpstinaFirma.TabIndex = 37;
+            this.cmbOpstinaFirma.TabIndex = 7;
+            // 
+            // rtbPreview
+            // 
+            this.rtbPreview.Enabled = false;
+            this.rtbPreview.Location = new System.Drawing.Point(664, 293);
+            this.rtbPreview.Name = "rtbPreview";
+            this.rtbPreview.Size = new System.Drawing.Size(458, 245);
+            this.rtbPreview.TabIndex = 17;
+            this.rtbPreview.Text = "";
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.Location = new System.Drawing.Point(407, 76);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Size = new System.Drawing.Size(131, 33);
+            this.btnPreview.TabIndex = 5;
+            this.btnPreview.Text = "Preview";
+            this.btnPreview.UseVisualStyleBackColor = true;
+            this.btnPreview.Click += new System.EventHandler(this.BtnPreview_Click);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(664, 270);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(152, 17);
+            this.label44.TabIndex = 27;
+            this.label44.Text = "Изглед на извештајот";
             // 
             // Form1
             // 
@@ -1804,6 +1838,9 @@
         private System.Windows.Forms.TextBox txtVkupno;
         private System.Windows.Forms.Button btnGeneriraj;
         private System.Windows.Forms.ComboBox cmbOpstinaFirma;
+        private System.Windows.Forms.Button btnPreview;
+        private System.Windows.Forms.RichTextBox rtbPreview;
+        private System.Windows.Forms.Label label44;
     }
 }
 
