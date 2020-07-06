@@ -210,12 +210,20 @@ namespace Plata
 
         private void btnOdberi2_Click(object sender, EventArgs e)
         {
-            long temp = (long)cmbFirmi2.SelectedValue;
-            //Fill the listbox
-            loadListBox(temp);
-            Firma firma = FirmaController.GetFirmaById(temp);
-            txtFirmaId.Text = firma.id.ToString();
-            //Add new vraboteni
+            if(cmbFirmi2.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ве молиме изберете фирма!");
+            }
+            else
+            {
+                long temp = (long)cmbFirmi2.SelectedValue;
+                //Fill the listbox
+                loadListBox(temp);
+                Firma firma = FirmaController.GetFirmaById(temp);
+                txtFirmaId.Text = firma.id.ToString();
+                //Add new vraboteni
+            }
+
         }
 
         private void btnSave2_Click(object sender, EventArgs e)
@@ -302,27 +310,35 @@ namespace Plata
 
         private void btnOdberi3_Click(object sender, EventArgs e)
         {
-            long temp = (long)lstBox.SelectedValue;
-            Vraboten vraboten = VrabotenController.getVrabotenById(temp);
-            txtImePrezime.Text = vraboten.ime;
-            dateTimePicker1.Value = vraboten.datumPriem;
-            cmbPol.SelectedItem = vraboten.pol;
-            txtEmbg.Text = vraboten.embg;
-            txtAdresa2.Text = vraboten.adresa;
-            cmbOpstina.SelectedItem = vraboten.opstina;
-            txtTransak.Text = vraboten.transakciskaSmetka;
-            cmbPodracna.SelectedItem = vraboten.podracnaEdinica;
-            txtEmail2.Text = vraboten.email;
-            txtBruto.Text = vraboten.brutoPlata.ToString();
-            txtNeto.Text = vraboten.netoPlata.ToString();
-            cmbSifra.SelectedItem = vraboten.sifra;
-            txtSkrateno.Text = vraboten.skrateno.ToString();
-            txtVrabotenId.Text = vraboten.id.ToString();
-            if(vraboten.datumOtkaz != null)
+            if(lstBox.SelectedIndex == -1)
             {
-                chbOtkaz.Checked = true;
-                dateTimePicker2.Value = (DateTime)vraboten.datumOtkaz;
+                MessageBox.Show("Ве молиме изберете вработен!");
             }
+            else
+            {
+                long temp = (long)lstBox.SelectedValue;
+                Vraboten vraboten = VrabotenController.getVrabotenById(temp);
+                txtImePrezime.Text = vraboten.ime;
+                dateTimePicker1.Value = vraboten.datumPriem;
+                cmbPol.SelectedItem = vraboten.pol;
+                txtEmbg.Text = vraboten.embg;
+                txtAdresa2.Text = vraboten.adresa;
+                cmbOpstina.SelectedItem = vraboten.opstina;
+                txtTransak.Text = vraboten.transakciskaSmetka;
+                cmbPodracna.SelectedItem = vraboten.podracnaEdinica;
+                txtEmail2.Text = vraboten.email;
+                txtBruto.Text = vraboten.brutoPlata.ToString();
+                txtNeto.Text = vraboten.netoPlata.ToString();
+                cmbSifra.SelectedItem = vraboten.sifra;
+                txtSkrateno.Text = vraboten.skrateno.ToString();
+                txtVrabotenId.Text = vraboten.id.ToString();
+                if (vraboten.datumOtkaz != null)
+                {
+                    chbOtkaz.Checked = true;
+                    dateTimePicker2.Value = (DateTime)vraboten.datumOtkaz;
+                }
+            }
+            
             //txtGod
             //txtMes
             //txtDen
@@ -342,10 +358,14 @@ namespace Plata
                 MessageBox.Show("Не е селектиран вработен");
                 return;
             }
-            long temp = (long)lstBox.SelectedValue;
-            VrabotenController.deleteVrabotenById(temp);
-            Clear2();
-            Clear3();
+            else
+            {
+                long temp = (long)lstBox.SelectedValue;
+                VrabotenController.deleteVrabotenById(temp);
+                Clear2();
+                Clear3();
+            }
+            
         }
         public void loadCmbVraboteni(long temp)
         {
@@ -385,16 +405,24 @@ namespace Plata
 
         private void btnOdberi5_Click(object sender, EventArgs e)
         {
-            long vrabotenId = long.Parse(cmbVraboteni.SelectedValue.ToString());
-            Vraboten vraboten = VrabotenController.getVrabotenById(vrabotenId);
-            txtOdraboteni.Text = lblRabotni.Text.ToString();
-            txtBruto2.Text = vraboten.brutoPlata.ToString();
-            txtNeto2.Text = vraboten.netoPlata.ToString();
-            txtPridonesiPio.Text = (vraboten.brutoPlata * 0.188).ToString();
-            txtPridonesiZdravstvo.Text = (vraboten.brutoPlata * 0.075).ToString();
-            txtPridonesiVrabotuvanje.Text = (vraboten.brutoPlata * 0.012).ToString();
-            txtProfZaboluvanje.Text = (vraboten.brutoPlata * 0.005).ToString();
-            txtDohod.Text = (vraboten.brutoPlata * 0.1).ToString();
+            if (cmbVraboteni.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ве молиме изберете вработен!");
+            }
+            else
+            {
+                long vrabotenId = long.Parse(cmbVraboteni.SelectedValue.ToString());
+                Vraboten vraboten = VrabotenController.getVrabotenById(vrabotenId);
+                txtOdraboteni.Text = lblRabotni.Text.ToString();
+                txtBruto2.Text = vraboten.brutoPlata.ToString();
+                txtNeto2.Text = vraboten.netoPlata.ToString();
+                txtPridonesiPio.Text = (vraboten.brutoPlata * 0.188).ToString();
+                txtPridonesiZdravstvo.Text = (vraboten.brutoPlata * 0.075).ToString();
+                txtPridonesiVrabotuvanje.Text = (vraboten.brutoPlata * 0.012).ToString();
+                txtProfZaboluvanje.Text = (vraboten.brutoPlata * 0.005).ToString();
+                txtDohod.Text = (vraboten.brutoPlata * 0.1).ToString();
+            }
+            
         }
 
 
@@ -412,15 +440,23 @@ namespace Plata
 
         private void btnGeneriraj_Click(object sender, EventArgs e)
         {
-            long temp = long.Parse(cmbFirmi3.SelectedValue.ToString());
-            Firma firma = FirmaController.GetFirmaById(temp);
-            String str = PlataController.generate(temp);
-            DateTime date = dateTimePicker3.Value;
-            StreamWriter file = new StreamWriter(@"..\..\Izvestai\" + firma.ime+"-"+date.ToString("MMMM")+"-"+date.ToString("yyyy")+".csv");
-            file.Write(str);
-            file.Close();
-            MessageBox.Show("Успешно генериран извештај за фирмата!");
-            btnPreview.PerformClick();
+            if (cmbFirmi3.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ве молиме селектирајте фирма прво!");
+            }
+            else
+            {
+                long temp = long.Parse(cmbFirmi3.SelectedValue.ToString());
+                Firma firma = FirmaController.GetFirmaById(temp);
+                String str = PlataController.generate(temp);
+                DateTime date = dateTimePicker3.Value;
+                StreamWriter file = new StreamWriter(@"..\..\Izvestai\" + firma.ime + "-" + date.ToString("MMMM") + "-" + date.ToString("yyyy") + ".csv");
+                file.Write(str);
+                file.Close();
+                MessageBox.Show("Успешно генериран извештај за фирмата!");
+                btnPreview.PerformClick();
+            }
+
         }
 
 
@@ -538,9 +574,17 @@ namespace Plata
 
         private void BtnPreview_Click(object sender, EventArgs e)
         {
-            long temp = long.Parse(cmbFirmi3.SelectedValue.ToString());
-            String str = PlataController.generate(temp);
-            rtbPreview.Text = str;
+            if(cmbFirmi3.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ве молиме селектирајте фирма прво!");
+            }
+            else
+            {
+                long temp = long.Parse(cmbFirmi3.SelectedValue.ToString());
+                String str = PlataController.generate(temp);
+                rtbPreview.Text = str;
+            }
+            
         }
     }
 }

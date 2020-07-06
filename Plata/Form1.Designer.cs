@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cmbOpstinaFirma = new System.Windows.Forms.ComboBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -117,6 +118,9 @@
             this.btnOdberi2 = new System.Windows.Forms.Button();
             this.cmbFirmi2 = new System.Windows.Forms.ComboBox();
             this.Плата = new System.Windows.Forms.TabPage();
+            this.label44 = new System.Windows.Forms.Label();
+            this.btnPreview = new System.Windows.Forms.Button();
+            this.rtbPreview = new System.Windows.Forms.RichTextBox();
             this.btnGeneriraj = new System.Windows.Forms.Button();
             this.label41 = new System.Windows.Forms.Label();
             this.txtVkupno = new System.Windows.Forms.TextBox();
@@ -149,10 +153,11 @@
             this.btnOdberi4 = new System.Windows.Forms.Button();
             this.cmbFirmi3 = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cmbOpstinaFirma = new System.Windows.Forms.ComboBox();
-            this.rtbPreview = new System.Windows.Forms.RichTextBox();
-            this.btnPreview = new System.Windows.Forms.Button();
-            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -178,6 +183,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label47);
             this.tabPage1.Controls.Add(this.cmbOpstinaFirma);
             this.tabPage1.Controls.Add(this.txtId);
             this.tabPage1.Controls.Add(this.button4);
@@ -226,6 +232,102 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Фирми";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cmbOpstinaFirma
+            // 
+            this.cmbOpstinaFirma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOpstinaFirma.FormattingEnabled = true;
+            this.cmbOpstinaFirma.Items.AddRange(new object[] {
+            "Арачиново 101",
+            "Берово 102",
+            "Битола 103",
+            "Богданци\t104",
+            "Боговиње\t105",
+            "Босилово\t106",
+            "Брвеница\t107",
+            "Валандово 108",
+            "Василево\t109",
+            "Вевчани 110",
+            "Велес 111",
+            "Виница 112",
+            "Вранештица 113",
+            "Врапчиште 114",
+            "Гевгелија 115",
+            "Гостивар 116",
+            "Градско 117",
+            "Дебар 118",
+            "Дебарца 119",
+            "Делчево 120",
+            "Демир Капија 121",
+            "Демир Хисар 122",
+            "Дојран 123",
+            "Долнени 124",
+            "Другово 125",
+            "Желино 126",
+            "Зајас 127",
+            "Залениково 128",
+            "Зрновци 129",
+            "Илинден 130",
+            "Јегуновце\t131",
+            "Кавадарци 132",
+            "Карбинци\t133",
+            "Кичево 134",
+            "Конче 135",
+            "Кочани 136",
+            "Кратово 137",
+            "Крива Паланка 138",
+            "Кривогаштани 139",
+            "Крушево 140",
+            "Куманово\t141",
+            "Липково 142",
+            "Лозово 143",
+            "Маврово и Ростуше 144",
+            "Македонски Брод 145",
+            "Македонска Каменица 146",
+            "Могила 147",
+            "Неготино 148",
+            "Новаци 149",
+            "Ново Село 150",
+            "Осломеј 151",
+            "Охрид 152",
+            "Петровец\t153",
+            "Пехчево 154",
+            "Пласница\t155",
+            "Прилеп 156",
+            "Пробиштип 157",
+            "Радовиш 158",
+            "Ранковце 159",
+            "Ресен 160",
+            "Росоман 161",
+            "Старо Нагоричане 162",
+            "Свети Николе 163",
+            "Сопиште 164",
+            "Струга 165",
+            "Струмица 166",
+            "Студеничани 167",
+            "Теарце 168",
+            "Тетово 169",
+            "Центар Жупа 170",
+            "Чашка 171",
+            "Чешино и Облешево 172",
+            "Чучер Сандево 173",
+            "Штип 174",
+            "Аеродром 175",
+            "Бутел 176",
+            "Гази Баба 177",
+            "Ѓорче Петров 178",
+            "Карпош 179",
+            "Кисела Вода 180",
+            "Сарај 181",
+            "Центар 182",
+            "Чаир 183",
+            "Шуто Оризари 184",
+            "Град Скопје 185"});
+            this.cmbOpstinaFirma.Location = new System.Drawing.Point(43, 302);
+            this.cmbOpstinaFirma.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbOpstinaFirma.Name = "cmbOpstinaFirma";
+            this.cmbOpstinaFirma.Size = new System.Drawing.Size(177, 24);
+            this.cmbOpstinaFirma.TabIndex = 7;
             // 
             // txtId
             // 
@@ -664,6 +766,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label46);
+            this.tabPage2.Controls.Add(this.label45);
             this.tabPage2.Controls.Add(this.txtVrabotenId);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.txtFirmaId);
@@ -959,7 +1063,7 @@
             this.cmbPol.Items.AddRange(new object[] {
             "Машки",
             "Женски"});
-            this.cmbPol.Location = new System.Drawing.Point(255, 249);
+            this.cmbPol.Location = new System.Drawing.Point(251, 250);
             this.cmbPol.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPol.Name = "cmbPol";
             this.cmbPol.Size = new System.Drawing.Size(177, 24);
@@ -968,7 +1072,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(255, 293);
+            this.label38.Location = new System.Drawing.Point(248, 294);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(45, 17);
@@ -977,7 +1081,7 @@
             // 
             // txtEmbg
             // 
-            this.txtEmbg.Location = new System.Drawing.Point(255, 316);
+            this.txtEmbg.Location = new System.Drawing.Point(251, 318);
             this.txtEmbg.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmbg.Name = "txtEmbg";
             this.txtEmbg.Size = new System.Drawing.Size(177, 22);
@@ -987,7 +1091,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(255, 230);
+            this.label39.Location = new System.Drawing.Point(248, 229);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(34, 17);
@@ -1126,7 +1230,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(251, 348);
+            this.label21.Location = new System.Drawing.Point(248, 348);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(56, 17);
@@ -1135,7 +1239,7 @@
             // 
             // txtAdresa2
             // 
-            this.txtAdresa2.Location = new System.Drawing.Point(251, 372);
+            this.txtAdresa2.Location = new System.Drawing.Point(251, 369);
             this.txtAdresa2.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdresa2.Name = "txtAdresa2";
             this.txtAdresa2.Size = new System.Drawing.Size(177, 22);
@@ -1183,7 +1287,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(411, 30);
+            this.button6.Location = new System.Drawing.Point(403, 30);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(131, 33);
@@ -1194,7 +1298,7 @@
             // 
             // btnOdberi2
             // 
-            this.btnOdberi2.Location = new System.Drawing.Point(247, 30);
+            this.btnOdberi2.Location = new System.Drawing.Point(251, 30);
             this.btnOdberi2.Margin = new System.Windows.Forms.Padding(4);
             this.btnOdberi2.Name = "btnOdberi2";
             this.btnOdberi2.Size = new System.Drawing.Size(131, 33);
@@ -1215,6 +1319,8 @@
             // 
             // Плата
             // 
+            this.Плата.Controls.Add(this.label49);
+            this.Плата.Controls.Add(this.label48);
             this.Плата.Controls.Add(this.label44);
             this.Плата.Controls.Add(this.btnPreview);
             this.Плата.Controls.Add(this.rtbPreview);
@@ -1257,6 +1363,34 @@
             this.Плата.TabIndex = 2;
             this.Плата.Text = "Плата";
             this.Плата.UseVisualStyleBackColor = true;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(664, 270);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(152, 17);
+            this.label44.TabIndex = 27;
+            this.label44.Text = "Изглед на извештајот";
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.Location = new System.Drawing.Point(407, 76);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Size = new System.Drawing.Size(131, 33);
+            this.btnPreview.TabIndex = 5;
+            this.btnPreview.Text = "Преглед";
+            this.btnPreview.UseVisualStyleBackColor = true;
+            this.btnPreview.Click += new System.EventHandler(this.BtnPreview_Click);
+            // 
+            // rtbPreview
+            // 
+            this.rtbPreview.Enabled = false;
+            this.rtbPreview.Location = new System.Drawing.Point(664, 293);
+            this.rtbPreview.Name = "rtbPreview";
+            this.rtbPreview.Size = new System.Drawing.Size(458, 245);
+            this.rtbPreview.TabIndex = 17;
+            this.rtbPreview.Text = "";
             // 
             // btnGeneriraj
             // 
@@ -1500,7 +1634,7 @@
             // 
             // btnOdberi5
             // 
-            this.btnOdberi5.Location = new System.Drawing.Point(244, 119);
+            this.btnOdberi5.Location = new System.Drawing.Point(243, 123);
             this.btnOdberi5.Margin = new System.Windows.Forms.Padding(4);
             this.btnOdberi5.Name = "btnOdberi5";
             this.btnOdberi5.Size = new System.Drawing.Size(131, 33);
@@ -1513,7 +1647,7 @@
             // 
             this.cmbVraboteni.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVraboteni.FormattingEnabled = true;
-            this.cmbVraboteni.Location = new System.Drawing.Point(20, 123);
+            this.cmbVraboteni.Location = new System.Drawing.Point(19, 132);
             this.cmbVraboteni.Margin = new System.Windows.Forms.Padding(4);
             this.cmbVraboteni.Name = "cmbVraboteni";
             this.cmbVraboteni.Size = new System.Drawing.Size(200, 24);
@@ -1564,129 +1698,50 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // cmbOpstinaFirma
+            // label45
             // 
-            this.cmbOpstinaFirma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbOpstinaFirma.FormattingEnabled = true;
-            this.cmbOpstinaFirma.Items.AddRange(new object[] {
-            "Арачиново 101",
-            "Берово 102",
-            "Битола 103",
-            "Богданци\t104",
-            "Боговиње\t105",
-            "Босилово\t106",
-            "Брвеница\t107",
-            "Валандово 108",
-            "Василево\t109",
-            "Вевчани 110",
-            "Велес 111",
-            "Виница 112",
-            "Вранештица 113",
-            "Врапчиште 114",
-            "Гевгелија 115",
-            "Гостивар 116",
-            "Градско 117",
-            "Дебар 118",
-            "Дебарца 119",
-            "Делчево 120",
-            "Демир Капија 121",
-            "Демир Хисар 122",
-            "Дојран 123",
-            "Долнени 124",
-            "Другово 125",
-            "Желино 126",
-            "Зајас 127",
-            "Залениково 128",
-            "Зрновци 129",
-            "Илинден 130",
-            "Јегуновце\t131",
-            "Кавадарци 132",
-            "Карбинци\t133",
-            "Кичево 134",
-            "Конче 135",
-            "Кочани 136",
-            "Кратово 137",
-            "Крива Паланка 138",
-            "Кривогаштани 139",
-            "Крушево 140",
-            "Куманово\t141",
-            "Липково 142",
-            "Лозово 143",
-            "Маврово и Ростуше 144",
-            "Македонски Брод 145",
-            "Македонска Каменица 146",
-            "Могила 147",
-            "Неготино 148",
-            "Новаци 149",
-            "Ново Село 150",
-            "Осломеј 151",
-            "Охрид 152",
-            "Петровец\t153",
-            "Пехчево 154",
-            "Пласница\t155",
-            "Прилеп 156",
-            "Пробиштип 157",
-            "Радовиш 158",
-            "Ранковце 159",
-            "Ресен 160",
-            "Росоман 161",
-            "Старо Нагоричане 162",
-            "Свети Николе 163",
-            "Сопиште 164",
-            "Струга 165",
-            "Струмица 166",
-            "Студеничани 167",
-            "Теарце 168",
-            "Тетово 169",
-            "Центар Жупа 170",
-            "Чашка 171",
-            "Чешино и Облешево 172",
-            "Чучер Сандево 173",
-            "Штип 174",
-            "Аеродром 175",
-            "Бутел 176",
-            "Гази Баба 177",
-            "Ѓорче Петров 178",
-            "Карпош 179",
-            "Кисела Вода 180",
-            "Сарај 181",
-            "Центар 182",
-            "Чаир 183",
-            "Шуто Оризари 184",
-            "Град Скопје 185"});
-            this.cmbOpstinaFirma.Location = new System.Drawing.Point(43, 302);
-            this.cmbOpstinaFirma.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbOpstinaFirma.Name = "cmbOpstinaFirma";
-            this.cmbOpstinaFirma.Size = new System.Drawing.Size(177, 24);
-            this.cmbOpstinaFirma.TabIndex = 7;
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(20, 65);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(84, 17);
+            this.label45.TabIndex = 35;
+            this.label45.Text = "Вработени:";
             // 
-            // rtbPreview
+            // label46
             // 
-            this.rtbPreview.Enabled = false;
-            this.rtbPreview.Location = new System.Drawing.Point(664, 293);
-            this.rtbPreview.Name = "rtbPreview";
-            this.rtbPreview.Size = new System.Drawing.Size(458, 245);
-            this.rtbPreview.TabIndex = 17;
-            this.rtbPreview.Text = "";
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(20, 12);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(54, 17);
+            this.label46.TabIndex = 36;
+            this.label46.Text = "Фирма";
             // 
-            // btnPreview
+            // label47
             // 
-            this.btnPreview.Location = new System.Drawing.Point(407, 76);
-            this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(131, 33);
-            this.btnPreview.TabIndex = 5;
-            this.btnPreview.Text = "Preview";
-            this.btnPreview.UseVisualStyleBackColor = true;
-            this.btnPreview.Click += new System.EventHandler(this.BtnPreview_Click);
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(24, 14);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(54, 17);
+            this.label47.TabIndex = 37;
+            this.label47.Text = "Фирма";
             // 
-            // label44
+            // label48
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(664, 270);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(152, 17);
-            this.label44.TabIndex = 27;
-            this.label44.Text = "Изглед на извештајот";
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(16, 15);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(54, 17);
+            this.label48.TabIndex = 37;
+            this.label48.Text = "Фирма";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(17, 111);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(72, 17);
+            this.label49.TabIndex = 38;
+            this.label49.Text = "Вработен";
             // 
             // Form1
             // 
@@ -1841,6 +1896,11 @@
         private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.RichTextBox rtbPreview;
         private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
     }
 }
 
